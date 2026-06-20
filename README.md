@@ -106,9 +106,3 @@ Run all cells top to bottom. No additional configuration needed.
 | Low Moisture (engineered) | 22.3% | Moisture < 15% strongly inhibits spoilage |
 | Protein Content | 10.2% | Proteolysis rate indicator |
 | Acidity Flag (engineered) | 4.6% | pH < 4.6 is the FDA pathogen inhibition threshold |
-
----
-
-## Author
-
-**[Your Name]** · [LinkedIn](https://linkedin.com/in/YOUR_PROFILE) · [GitHub](https://github.com/YOUR_USERNAME)
