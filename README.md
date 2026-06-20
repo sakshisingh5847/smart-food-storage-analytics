@@ -5,7 +5,7 @@
 
 Manufacturer shelf-life labels assume perfect storage. In reality, temperature, humidity, and packaging dramatically change how long food stays safe. This project predicts **expected shelf life in days** given a product's chemical properties and current storage conditions — enabling smarter inventory decisions and proactive cold-chain monitoring.
 
-> **Data note:** The dataset is synthetic, generated to reflect established food-science relationships (Arrhenius kinetics, water activity theory, pH pathogen thresholds). It is intended for pipeline demonstration purposes. In a production system, this pipeline would be retrained on real IoT sensor and lab testing data.
+> **Data note:** The dataset is synthetic, generated to reflect established food-science relationships (Arrhenius kinetics, water activity theory, pH pathogen thresholds). It is intended for pipeline demonstration purposes.
 
 ---
 
@@ -20,20 +20,6 @@ Manufacturer shelf-life labels assume perfect storage. In reality, temperature, 
 - 64% MAE reduction over baseline
 - CV R² within 0.001 of test R² — no overfitting
 - MAE = 1.7% of the full shelf-life range (1–946 days)
-- 66.8% of predictions within ±5 days across all categories
-
----
-
-## Sample Outputs
-
-**Temperature Effect on Shelf Life by Food Category**
-![Temperature Effect](outputs/06_temperature_effect_by_category.png)
-
-**Model Comparison — R², CV R², MAE**
-![Model Comparison](outputs/09_model_comparison.png)
-
-**XGBoost Feature Importance**
-![Feature Importance](outputs/12_feature_importance.png)
 
 ---
 
@@ -81,7 +67,7 @@ Run all cells top to bottom. No additional configuration needed.
 | **4. Preprocessing** | Log-transform target, train/test split (80/20), StandardScaler fit on train only |
 | **5. Modelling** | Linear Regression (baseline), Random Forest, XGBoost — tuned with RandomizedSearchCV + 5-fold CV |
 | **6. Evaluation** | R², CV R², MAE, RMSE, residuals, actual vs predicted, feature importance |
-| **7. Business Metrics** | Waste reduction analysis, inventory planning, multi-food predictions, cold-chain simulation |
+| **7. Business Metrics** | Waste reduction analysis, inventory planning, cold-chain simulation |
 
 ---
 
