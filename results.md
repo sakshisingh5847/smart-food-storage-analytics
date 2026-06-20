@@ -1,13 +1,19 @@
 # 📊 Project Results — Smart Food Storage Analytics
 
-## 1. Data Cleaning Summary
-Raw rows : 4,038 
-Duplicate rows removed : 55 
-Outliers removed : 51 (pH > 10, Temp > 50°C, Moisture > 100%) 
-Missing values imputed : 1,467 (median for numeric, mode for categorical) 
-**Final cleaned rows** : **3,463** 
+---
 
-Label typos fixed — Food Category:
+## 1. Data Cleaning Summary
+
+| Step | Detail |
+|---|---|
+| Raw rows | 4,038 |
+| Duplicate rows removed | 55 |
+| Outliers removed | 51 (pH > 10, Temp > 50°C, Moisture > 100%) |
+| Missing values imputed | 1,467 (median for numeric, mode for categorical) |
+| **Final clean rows** | **3,463** |
+
+**Label typos fixed — Food Category:**
+```
 BEFORE: 13 inconsistent labels
 ['Bakery', 'Bakery ', 'Beverages', 'Condiments', 'Dairy',
  'MEAT', 'Meat', 'Produce', 'Sea food', 'Seafood',
@@ -16,8 +22,10 @@ BEFORE: 13 inconsistent labels
 AFTER: 8 clean categories
 ['Bakery', 'Beverages', 'Condiments', 'Dairy',
  'Meat', 'Produce', 'Seafood', 'Snacks']
+```
 
- 
+---
+
 ## 2. Feature Engineering
 
 | Feature | Formula | Food-Science Basis |
@@ -124,5 +132,3 @@ Model is more likely to under-predict than over-predict — the safer failure mo
 | 0°C (optimal) | 4.0 days |
 | 4°C | 2.5 days |
 | 8°C | 1.2 days |
-
-> Most critical degradation occurs between 4°C–8°C. Model can feed IoT sensors to trigger automatic alerts when predicted shelf life drops below a threshold.
