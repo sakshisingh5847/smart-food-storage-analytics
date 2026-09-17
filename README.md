@@ -83,12 +83,3 @@ Run all cells top to bottom. No additional configuration needed.
 **Features:** Storage_Temp_C, Water_Activity, Relative_Humidity_pct, pH, Moisture_Content_pct, Packaging_Type, Preservative_Conc_pct, Protein_Content_pct, Fat_Content_pct, Food_Category
 
 ---
-
-## Top Predictors
-
-| Feature | Importance | Why it matters |
-|---|---|---|
-| Water Activity | 39.7% | Gold-standard microbial growth metric |
-| Low Moisture (engineered) | 22.3% | Moisture < 15% strongly inhibits spoilage |
-| Protein Content | 10.2% | Proteolysis rate indicator |
-| Acidity Flag (engineered) | 4.6% | pH < 4.6 is the FDA pathogen inhibition threshold |
